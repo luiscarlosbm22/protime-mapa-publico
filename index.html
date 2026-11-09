@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Mapa público de incidencias · ProTime</title>
+    <meta name="theme-color" content="#073d76">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mapa.css">
+</head>
+<body class="web-mode">
+    <div id="phone">
+        <div id="app"><p role="status">Cargando el mapa de incidencias…</p></div>
+    </div>
+    <script src="js/parcelas.js"></script>
+    <script src="js/incidencias-demo.js"></script>
+    <script src="js/html.js"></script>
+    <script src="js/map-config.js"></script>
+    <script src="js/map-heat.js"></script>
+    <script src="js/google-maps.js"></script>
+    <script src="js/mapa.js"></script>
+    <script>
+        renderIncidentMap({
+            container: document.getElementById('app'),
+            header: '<header class="pt-header"><div class="head-title"><b>Mapa público de incidencias</b><small>ProTime · Datos de demostración</small></div></header>',
+            all: incidenciasDemo()
+        });
+    </script>
+</body>
+</html>
